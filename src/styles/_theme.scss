@@ -1,0 +1,27 @@
+@import 'colors';
+
+.light-theme {
+    $color-primary: $main-purple;
+    $color-secondary: $main-purple-hover;
+    $background-primary: $white;
+    $background-secondary: $light-grey;
+    $text-primary: $black;
+    $text-secondary: $medium-grey;
+
+    $success: $green;
+    $error: $red;
+    $warning: $yelllow;
+}
+
+.dark-theme {
+    $color-primary: $main-purple;
+    $color-secondary: $main-purple-hover;
+    $background-primary: $dark-grey;
+    $background-secondary: $very-dark-grey;
+    $text-primary: $white;
+    $text-secondary: $medium-grey;
+
+    $success: $green;
+    $error: $red;
+    $warning: $yelllow;
+}
