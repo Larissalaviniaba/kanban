@@ -1,13 +1,14 @@
 <template>
-  <p>Home</p>
+  <EnhancedButton variant="destructive" />
 </template>
 
 <script lang="ts">
-export default {
-  data() {
-    return {
-      data: "Home",
-    };
+import { defineComponent } from "vue";
+import EnhancedButton from "@/components/EnhancedButton.vue";
+
+export default defineComponent({
+  components: {
+    EnhancedButton,
   },
-};
+});
 </script>
