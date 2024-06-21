@@ -1,4 +1,4 @@
-# ![Kanban](src/assets/logotipo.png) Kanban 
+# ![Kanban](public/logotipo.png) Kanban 
  
 
 ## Descrição
