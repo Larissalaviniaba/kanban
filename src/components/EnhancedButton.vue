@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from "vue";
 
 interface ButtonProps {
   width: number;
@@ -21,7 +21,7 @@ interface ButtonProps {
   variant: "primary" | "secondary" | "destructive";
 }
 
-export default defineComponent({
+export default Vue.extend({
   props: {
     width: {
       type: Number,

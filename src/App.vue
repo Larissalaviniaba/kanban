@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import AppHome from "@/pages/AppHome.vue";
+const AppHome = () => import("@/pages/AppHome.vue");
 
 export default Vue.extend({
   name: "App",
@@ -14,13 +14,9 @@ export default Vue.extend({
 });
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+body
+  height: 100vh
+  background-color: $light-grey
+  font-family: "Plus Jakarta Sans", sans-serif
 </style>

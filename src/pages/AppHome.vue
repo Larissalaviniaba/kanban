@@ -1,14 +1,17 @@
 <template>
-  <EnhancedButton variant="destructive" />
+  <!-- <EnhancedButton variant="destructive" /> -->
+  <BoardMenuEntry />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import EnhancedButton from "@/components/EnhancedButton.vue";
-
+// const EnhancedButton = () => import("@/components/EnhancedButton.vue");
+const BoardMenuEntry = () =>
+  import("@/components/VerticalMenu/BoardMenuEntry.vue");
 export default defineComponent({
   components: {
-    EnhancedButton,
+    BoardMenuEntry,
+    // EnhancedButton,
   },
 });
 </script>
