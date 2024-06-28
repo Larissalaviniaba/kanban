@@ -14,7 +14,7 @@
 
       <div class="boards-list">
         <button
-          class="teste"
+          class="button-board"
           v-for="(board, i) in boards"
           :key="i"
           @click="toggleButton(i)"
@@ -40,15 +40,17 @@
       </div>
     </div>
 
-    <div class="menu-features">
-      <button class="hide" @click="toggleMenu">
-        <b-icon
-          icon="eye-slash"
-          font-scale="1.3"
-          shift-h="-4"
-          variant="$medium-grey"
-        ></b-icon>
-        Hide Sidebar
+    <div v-if="isMenuVisible" class="menu-hide">
+      <button @click="toggleMenu">
+        <span>
+          <b-icon icon="eye-slash" font-scale="1.3" shift-h="-4"></b-icon>
+          Hide Sidebar
+        </span>
+      </button>
+    </div>
+    <div v-if="!isMenuVisible" class="show-menu">
+      <button @click="toggleMenu">
+        <b-icon icon="eye" font-scale="1.3"></b-icon>
       </button>
     </div>
   </section>
@@ -91,6 +93,7 @@ export default Vue.extend({
   height: 120px
   padding: 10px 10px 10px 30px
   background-color: $white
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08)
   img
     width: 40px
     height: 40px
@@ -120,45 +123,65 @@ export default Vue.extend({
   flex: 1
   padding: 10px 10px 0 0
   overflow-y: auto
-  .teste
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    padding-left: 33px
-    width: 95%
-    height: 50px
-    font-weight: bold
-    background-color: transparent
-    color: $medium-grey
-    &:hover
-      background-color: $purple-light
-      color: $main-purple
-      border-radius: 0 50px 50px 0
-    &.button-board-select
-      background-color: $main-purple
-      color: $white
-      border-radius: 0 50px 50px 0
 
+.button-board,
 .create-new-board
   display: flex
   justify-content: flex-start
   align-items: center
   padding-left: 33px
-  margin: 10px 0
   width: 95%
   height: 50px
   font-weight: bold
   background-color: transparent
-  color: $main-purple
   &:hover
     background-color: $purple-light
     color: $main-purple
     border-radius: 0 50px 50px 0
 
-.menu-features
-  margin-top: auto
+.button-board
+  color: $medium-grey
+  &.button-board-select
+    background-color: $main-purple
+    color: $white
+    border-radius: 0 50px 50px 0
+
+.create-new-board
+  margin: 10px 0
+  color: $main-purple
+
+.menu-hide
+  display: flex
+  background-color: $white
+  padding-bottom: 40px
+  button
+    color: $medium-grey
+    font-weight: bold
+    background-color: transparent
+    padding: 20px 40px
+    text-align: left
+    span
+      display: inline-block
+      transition: transform 0.2s ease-in-out
+    &:hover
+      transform: scale(1.1)
+
+.show-menu
   display: flex
   align-items: center
-  padding: 10px 30px
-  background-color: $white
+  width: 70px
+  height: 50px
+  margin-top: auto
+  margin-bottom: 40px
+  padding: 10px
+  border-radius: 0 50px 50px 0
+  background-color: $main-purple
+  button
+    width: 100%
+    color: $white
+    background-color: transparent
+    transition: transform 0.2s ease-in-out
+  &:hover
+    background-color: $purple-light-hover
+    transform: scale(1.1)
 </style>
