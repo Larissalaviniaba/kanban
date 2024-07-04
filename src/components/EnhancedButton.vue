@@ -65,8 +65,7 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
 .button-primary, .button-secondary, .button-destructive
-    border: none
-    font-weight: normal
+    font-weight: 600
     transition: background-color 0.3s ease, color 0.3s ease
 
 .button-primary

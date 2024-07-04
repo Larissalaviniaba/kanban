@@ -14,9 +14,4 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="sass">
-body
-  height: 100vh
-  background-color: $light-grey
-  font-family: "Plus Jakarta Sans", sans-serif
-</style>
+<style lang="sass"></style>
