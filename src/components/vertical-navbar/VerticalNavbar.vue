@@ -66,8 +66,8 @@ export default Vue.extend({
 <style lang="sass" scoped>
 .container-nav,
 .container-boards-overview
-  max-width: 280px
-  min-width: 280px
+  max-width: 300px
+  min-width: 300px
   height: 100vh
   display: flex
   flex-direction: column
@@ -128,4 +128,25 @@ export default Vue.extend({
   &:hover
     background-color: $purple-light-hover
     transform: scale(1.1)
+
+@media (max-width: 768px)
+.container-nav,
+.container-boards-overview
+  max-width: 250px
+  min-width: 250px
+
+.logotipo
+
+  img
+    width: 38px
+    height: 38px
+  h1
+    font-size: 30px
+    font-weight: bold
+    margin: 0
+
+@media (max-width: 840px)
+  .container-nav,
+  .container-boards-overview
+    display: none
 </style>
